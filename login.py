@@ -14,10 +14,12 @@ def start():
 def auth():
     usr = request.form["user"]
     psw = request.form["pass"]
+    tempMsg = ""
     if (usr == "Tony" and psw == "Hawk"):
-        return "Success! You have now logged in."
+        tempMsg = "Success! You have now logged in."
     else:
-        return "Oh no! You have failed to log in."
+        tempMsg = "Oh no! You have failed to log in."
+    return render_template("Msg.html", m = tempMsg)
 
 
 if (__name__) == "__main__":

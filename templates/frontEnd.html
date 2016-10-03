@@ -3,18 +3,25 @@
 <html>
 
   <head>
-    <h1> This is Work 4: Login </h1>
+    <h1> Work 4 </h1>
 
   </head>
 
   <body>
-    <center><h2> This is the login form.</h2></center>
+    <center><h2> This is the registration/login form.</h2>
+      <br> If you are creating a new account, hit the register button. If
+      you are logging in to an existing account, hit the login button.
+      <br>
+      <br>
+      {{m}}
+    </center>
     <form action="/authenticate/" method="POST">
       Username: <input type="text" name="user">
       <br>
       Possword: <input type="text" name="pass">
       <br>
-      <input type="submit" value="Submit">
+      <input type="submit" value="Register" name="submit">
+      <input type="submit" value="Login" name="submit">
       <br>
     </form>
   </body>

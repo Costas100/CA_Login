@@ -13,9 +13,9 @@ data.close()
 @app.route("/")
 def root():
     if "username" in session:
-        return redirect(url_for("/welcome"))
+        return redirect(url_for("welc"))
     else:
-        return redirect(url_for("/frontEnd"))
+        return redirect(url_for("start"))
 
 
 @app.route("/welcome")

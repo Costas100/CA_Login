@@ -18,21 +18,21 @@ def root():
         return redirect(url_for("start"))
 
 
-@app.route("/welcome")
+@app.route("/welcome/")
 def welc():
     return render_template("welcome.html")
 
-@app.route("/logout")
+@app.route("/logout/")
 def logout():
     if "Lo" in request.form["submit"]:
         session.pop("username")
         return render.template("logout.html")
 
-@app.route("/logreg")
+@app.route("/logreg/")
 def start():
     return render_template('frontEnd.html')
 
-@app.route("/authenticate" , methods=['POST'])
+@app.route("/authenticate/" , methods=['POST'])
 def auth():
     usr = request.form["user"]
     psw = request.form["pass"]
